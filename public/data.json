@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Albert",
+        "class": "6",
+        "address": "1270 Diamond Springs Rd #102",
+        "phone": "0987098098",
+        "isActive": false
+    },
+    {
+        "id": 2,
+        "name": "Joseph",
+        "class": "7",
+        "address": "325 Kennedy Memorial Dr",
+        "phone": "07978689865",
+        "isActive": true
+    },
+    {
+        "id": 3,
+        "name": "Steffy",
+        "class": "8",
+        "address": "1601 E Alton Gloor Blvd",
+        "phone": "08757465487",
+        "isActive": false
+    }
+]

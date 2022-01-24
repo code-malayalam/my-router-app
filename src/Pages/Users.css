@@ -1,0 +1,16 @@
+.users {
+    font-size: 10px;
+}
+
+.users .users-item {
+    border: 1px solid lightgrey;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    background: rgb(210, 225, 237);
+}
+
+.users .descr {
+    font-size: 8px;
+    color:slategrey;
+}

@@ -1,0 +1,14 @@
+.details .title {
+    padding: 5px;
+    margin-bottom: 5px;
+    background: rgb(210, 225, 237);
+}
+
+.details .body {
+    font-size: 8px;
+    color:slategrey;
+}
+
+.details button {
+    margin-top: 5px;
+}

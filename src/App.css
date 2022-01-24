@@ -1,0 +1,16 @@
+
+body {
+  margin: 0;
+  background: rgb(174, 174, 174);
+}
+
+.page {
+  margin: 5px 40px;
+  background: white;
+  min-height: 400px;
+  padding: 10px;
+}
+
+a {
+  font-size: 10px;
+}
