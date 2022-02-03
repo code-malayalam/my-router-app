@@ -1,13 +1,12 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
-import {useParams, useNavigate} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import './Details.css'
 
 
 export default function Details() {
 
   const {userId} = useParams();
-  const navigate = useNavigate();
 
   const [user, setUser] = useState([]);
 
@@ -33,9 +32,6 @@ export default function Details() {
           <div className="body">
               Class: {user.class}
           </div>
-          <button onClick={() => {
-              navigate(-1);
-          }}>Done</button>
       </div>
   );
 }

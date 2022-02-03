@@ -22,5 +22,29 @@
         "address": "1601 E Alton Gloor Blvd",
         "phone": "08757465487",
         "isActive": false
+    },
+    {
+        "id": 4,
+        "name": "Godman",
+        "class": "6",
+        "address": "1270 Diamond Springs Rd #102",
+        "phone": "0987098098",
+        "isActive": false
+    },
+    {
+        "id": 5,
+        "name": "Dino",
+        "class": "9",
+        "address": "325 Kennedy Memorial Dr",
+        "phone": "07978689865",
+        "isActive": true
+    },
+    {
+        "id": 6,
+        "name": "Freddy",
+        "class": "7",
+        "address": "1601 E Alton Gloor Blvd",
+        "phone": "08757465487",
+        "isActive": false
     }
 ]
