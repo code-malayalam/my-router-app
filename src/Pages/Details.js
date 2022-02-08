@@ -1,22 +1,38 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, useNavigate, useLocation} from 'react-router-dom';
 import './Details.css'
 
 
 export default function Details() {
 
+  const location = useLocation();
+  const state = location.state || {};
+
   const {userId} = useParams();
 
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState(state.data);
+
+  const navigate = useNavigate();
+
+  
+
+
+  console.log(location);    
 
   useEffect(() => {
-    axios('/data.json')
+    if(!user) {
+        axios('/data.json')
         .then((response) => {
             const item = response.data.find((userItem) => userItem.id === parseInt(userId));
             setUser(item);
         });
-}, [userId]);
+    }
+}, [userId, user]);
+
+if(!user) {
+    return null;
+}
   
   return (
       <div className="page details">
@@ -31,6 +47,11 @@ export default function Details() {
           </div>
           <div className="body">
               Class: {user.class}
+          </div>
+          <div>
+              <button onClick={() => {
+                navigate(-1);
+              }}>BACK</button>
           </div>
       </div>
   );
