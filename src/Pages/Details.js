@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
-import {useParams, useNavigate, useLocation} from 'react-router-dom';
+import {useParams, useNavigate, useLocation, NavLink, Outlet} from 'react-router-dom';
 import './Details.css'
+
 
 
 export default function Details() {
@@ -15,10 +16,6 @@ export default function Details() {
 
   const navigate = useNavigate();
 
-  
-
-
-  console.log(location);    
 
   useEffect(() => {
     if(!user) {
@@ -48,9 +45,17 @@ if(!user) {
           <div className="body">
               Class: {user.class}
           </div>
+          <div className="sub-menu">
+                <NavLink to="" end><span> Marks </span> </NavLink>
+                <NavLink to="sports"><span> Sports </span> </NavLink>
+                <NavLink to="remarks"><span> Remarks </span> </NavLink>
+          </div>
+          <div className="details-body">
+            <Outlet context={user}/>
+          </div>
           <div>
               <button onClick={() => {
-                navigate(-1);
+                navigate('..');
               }}>BACK</button>
           </div>
       </div>

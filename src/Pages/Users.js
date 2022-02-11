@@ -48,7 +48,7 @@ export default function Users() {
                         <option value="9">9</option>
                         <option value="10">10</option>
                     </select>
-                </div>
+                </div> 
             </div>
             {data
                 .filter((item) => {
@@ -61,7 +61,7 @@ export default function Users() {
                 .map((item) => {
                 return (
                     <div className="users-item" key={item.id} onClick={() => {
-                        navigate(`/details/${item.id}`, {
+                        navigate(`${item.id}`, {
                             state: {
                                 data: item,
                             }

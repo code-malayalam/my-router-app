@@ -1,0 +1,13 @@
+.marks {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    font-size: 10px;
+    border: 2px solid rgb(12, 48, 109);
+    padding: 10px;
+    background: rgb(210, 225, 237);
+}
+
+.marks span {
+    border-bottom: 1px solid rgb(172, 200, 223);
+    padding: 5px;
+}

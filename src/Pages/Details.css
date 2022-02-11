@@ -12,3 +12,25 @@
 .details button {
     margin-top: 5px;
 }
+
+.sub-menu {
+    margin-top: 20px;
+}
+.sub-menu a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+.sub-menu span {
+    padding: 5px;
+    display: inline-block;
+    background: darkgrey;
+    
+    
+}
+
+.sub-menu .active span{
+    background: rgb(12, 48, 109);
+    
+}

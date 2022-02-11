@@ -1,0 +1,15 @@
+.sports {
+    font-size: 10px;
+    border: 2px solid rgb(12, 48, 109);
+    padding: 10px;
+    background: rgb(210, 225, 237);
+}
+
+.sports > div{
+    display: flex;
+    border-bottom: 1px solid rgb(172, 200, 223);
+}
+
+.sports div{
+    padding: 5px;
+}
