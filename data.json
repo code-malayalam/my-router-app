@@ -1,0 +1,109 @@
+[
+    {
+        "id": 1,
+        "name": "Albert",
+        "class": "6",
+        "address": "1270 Diamond Springs Rd #102",
+        "phone": "0987098098",
+        "isActive": false,
+        "marks": {
+            "physics": [46, 66, 78, 56, 87],
+            "chemistry": [76, 62, 71, 86, 36],
+            "maths": [76, 86, 98, 86, 67]
+
+        },
+        "sports": {
+            "highjump": 1,
+            "longjump": -1
+        },
+        "remarks": ["Notes not submitted"]
+    },
+    {
+        "id": 2,
+        "name": "Joseph",
+        "class": "7",
+        "address": "325 Kennedy Memorial Dr",
+        "phone": "07978689865",
+        "isActive": true,
+        "marks": {
+            "physics": [56, 66, 78, 56, 87],
+            "chemistry": [12, 62, 71, 86, 36],
+            "maths": [46, 86, 98, 86, 67]
+
+        },
+        "sports": {
+            "shotput": 1
+        },
+        "remarks": ["Good"]
+    },
+    {
+        "id": 3,
+        "name": "Steffy",
+        "class": "8",
+        "address": "1601 E Alton Gloor Blvd",
+        "phone": "08757465487",
+        "isActive": false,
+        "marks": {
+            "physics": [17, 66, 78, 56, 87],
+            "chemistry": [25, 62, 71, 86, 36],
+            "maths": [77, 86, 98, 86, 67]
+
+        },
+        "sports": {
+        },
+        "remarks": ["Notes not submitted"]
+    },
+    {
+        "id": 4,
+        "name": "Godman",
+        "class": "6",
+        "address": "1270 Diamond Springs Rd #102",
+        "phone": "0987098098",
+        "isActive": false,
+        "marks": {
+            "physics": [66, 66, 78, 56, 87],
+            "chemistry": [65, 62, 71, 86, 36],
+            "maths": [98, 86, 98, 86, 67]
+
+        },
+        "sports": {
+            "100m": 1
+        },
+        "remarks": ["Missed class"]
+    },
+    {
+        "id": 5,
+        "name": "Dino",
+        "class": "9",
+        "address": "325 Kennedy Memorial Dr",
+        "phone": "07978689865",
+        "isActive": true,
+        "marks": {
+            "physics": [77, 66, 78, 56, 87],
+            "chemistry": [87, 62, 71, 86, 36],
+            "maths": [12, 86, 98, 86, 67]
+
+        },
+        "sports": {
+        },
+        "remarks": ["Good"]
+    },
+    {
+        "id": 6,
+        "name": "Freddy",
+        "class": "7",
+        "address": "1601 E Alton Gloor Blvd",
+        "phone": "08757465487",
+        "isActive": false,
+        "marks": {
+            "physics": [59, 66, 78, 56, 87],
+            "chemistry": [33, 62, 71, 86, 36],
+            "maths": [77, 86, 98, 86, 67]
+
+        },
+        "sports": {
+            "hurdles": 1
+        },
+        "remarks": []
+    }
+]
