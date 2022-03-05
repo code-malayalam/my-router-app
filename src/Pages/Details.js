@@ -19,7 +19,7 @@ export default function Details() {
 
   useEffect(() => {
     if(!user) {
-        axios('/data.json')
+        axios('/my-router-app/data.json')
         .then((response) => {
             const item = response.data.find((userItem) => userItem.id === parseInt(userId));
             setUser(item);
@@ -55,7 +55,7 @@ if(!user) {
           </div>
           <div>
               <button onClick={() => {
-                navigate('..');
+                navigate('/users');
               }}>BACK</button>
           </div>
       </div>

@@ -13,7 +13,7 @@ import Remarks from './Pages/Remarks';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="my-router-app">
       <div>
         <Header />
       </div>
