@@ -10,6 +10,20 @@ body {
   min-height: 400px;
   padding: 10px;
 }
+.login {
+  display: flex;
+  justify-content: center;
+}
+
+.login > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.login > div > input, button{
+  margin: 5px;
+  padding: 5px;
+}
 
 a {
   font-size: 10px;

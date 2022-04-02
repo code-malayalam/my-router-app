@@ -12,7 +12,9 @@
 .header span {
     padding: 5px;
     display: inline-block;
-    
+    color: white;
+    font-size: 10px;
+    cursor: pointer;
 }
 
 .header .active {

@@ -1,8 +1,9 @@
 import React from 'react'
-import testObj from '../utils/Common'
+import { isLoggedIn } from '../utils/Common'
 
 export default function Home() {
-    console.log(testObj);
+    console.log(isLoggedIn());
+
     return (
         <div className="page">
             Home
