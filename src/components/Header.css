@@ -1,7 +1,7 @@
 .header {
     background: rgb(35, 84, 169);
     display: flex;
-    
+    min-height: 25px;
 }
 
 .header a {

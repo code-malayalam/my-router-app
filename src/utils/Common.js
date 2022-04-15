@@ -1,3 +1,4 @@
+import { matchPath } from 'react-router-dom';
 const testFn = () => {
     console.log('Hello world');
 }
@@ -39,13 +40,33 @@ const clearUserInfo = () => {
     localStorage.removeItem("cred")
 }
 
+function isRouteRoleMatches(roles) {
+    if(!roles) {
+        return true;
+    }
+    const  myRoles = getRoles();
+    const filtered = roles.filter((item) => myRoles.includes(item));
+    return !!filtered.length;
+}
+
+function getRolesForPath(pathname, routeConfig) {
+    for (const [path, obj] of Object.entries(routeConfig)) {
+        if(matchPath(path, pathname)) {
+            return obj.roles;
+        }
+    }
+    return null;
+}
+
 export {
     testFn,
     isLoggedIn,
     getRoles,
     isUserValidForRole,
     saveUserInfo,
-    clearUserInfo
+    clearUserInfo,
+    getRolesForPath,
+    isRouteRoleMatches
 }
 
 export default testObj;
