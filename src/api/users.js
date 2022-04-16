@@ -12,7 +12,6 @@ const dummyApi = (user) => {
 const login = (user) => {
     return dummyApi(user)
         .then((role) => {
-            console.log('ROLE', role);
             saveUserInfo({
                 user,
                 role 

@@ -1,9 +1,10 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { clearUserInfo } from "../utils/Common";
 import "./Header.css";
-import LogedInOutlet from "./LogedInOutlet";
+import LogedInOutlet from "./outlets/LogedInOutlet";
 import LoggedInMenuItem from "./LoggedInMenuItem";
+import LoginLink from "./links/LoginLink";
 
 export default function Header() {
     const navigate = useNavigate();
@@ -12,18 +13,18 @@ export default function Header() {
         <div>
             <div className="header">
                 <LoggedInMenuItem>
-                    <NavLink to="/">
+                    <LoginLink to="/">
                         <span> Home </span>
-                    </NavLink>
-                    <NavLink to="users">
+                    </LoginLink>
+                    <LoginLink to="users">
                         <span> Users </span>
-                    </NavLink>
-                    <NavLink to="settings">
+                    </LoginLink>
+                    <LoginLink to="settings">
                         <span> Settings </span>
-                    </NavLink>
-                    <NavLink to="usage">
+                    </LoginLink>
+                    <LoginLink to="usage">
                         <span> Usage </span>
-                    </NavLink>
+                    </LoginLink>
                     <span style={{flexGrow: 1}}/>
                     <span onClick={() => {
                         clearUserInfo();
