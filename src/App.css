@@ -38,3 +38,10 @@ body {
 a {
   font-size: 10px;
 }
+.logout {
+  flex-grow: 1;
+}
+a.logout span{
+  display: flex;
+  flex-direction: row-reverse;
+}
