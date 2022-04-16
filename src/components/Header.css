@@ -1,7 +1,7 @@
 .header {
     background: rgb(35, 84, 169);
     display: flex;
-    
+    min-height: 25px;
 }
 
 .header a {
@@ -12,7 +12,9 @@
 .header span {
     padding: 5px;
     display: inline-block;
-    
+    color: white;
+    font-size: 10px;
+    cursor: pointer;
 }
 
 .header .active {

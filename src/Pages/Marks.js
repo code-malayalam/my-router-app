@@ -15,7 +15,7 @@ function Marks() {
             
             terms.map((item) => {
                 return (
-                    <span>
+                    <span key={item}>
                         {item}
                     </span>
                 );
@@ -25,9 +25,9 @@ function Marks() {
             Object.keys(marks).map((subj) => {
                 const values = marks[subj];
                 const items = [subj, ...values];
-                return items.map((item) => {
+                return items.map((item, i) => {
                     return (
-                        <span>
+                        <span key={i}>
                             {item}
                         </span>
                     );
