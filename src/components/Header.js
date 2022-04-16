@@ -1,6 +1,8 @@
 import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { clearUserInfo } from '../utils/Common';
 import './Header.css';
+import LogedInOutlet from './outlets/LogedInOutlet';
 
 export default function Header() {
   return (
@@ -18,9 +20,12 @@ export default function Header() {
             <NavLink to="usage">
                 <span> Usage </span>
             </NavLink>
+            <NavLink className="logout" to="login" onClick={() => clearUserInfo()}>
+                <span> Logout </span>
+            </NavLink>
         </div>
         <div>
-            <Outlet />
+            <LogedInOutlet />
         </div>
       </div>
     

@@ -1,6 +1,5 @@
 {
   "name": "my-second-app",
-  "homepage": "my-router-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
