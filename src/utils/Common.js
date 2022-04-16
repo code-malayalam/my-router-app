@@ -1,3 +1,5 @@
+import routeConfig from './route-config-main.json';
+
 import { matchPath } from 'react-router-dom';
 const testFn = () => {
     console.log('Hello world');
@@ -44,12 +46,11 @@ function isRouteRoleMatches(roles) {
     if(!roles) {
         return true;
     }
-    const  myRoles = getRoles();
-    const filtered = roles.filter((item) => myRoles.includes(item));
+    const filtered = roles.filter((item) => isUserValidForRole(item));
     return !!filtered.length;
 }
 
-function getRolesForPath(pathname, routeConfig) {
+function getRolesForPath(pathname) {
     for (const [path, obj] of Object.entries(routeConfig)) {
         if(matchPath(path, pathname)) {
             return obj.roles;
@@ -57,6 +58,11 @@ function getRolesForPath(pathname, routeConfig) {
     }
     return null;
 }
+function isPathnameValid(pathname) {
+    const roles = getRolesForPath(pathname);
+    return isRouteRoleMatches(roles);
+}
+
 
 export {
     testFn,
@@ -65,8 +71,7 @@ export {
     isUserValidForRole,
     saveUserInfo,
     clearUserInfo,
-    getRolesForPath,
-    isRouteRoleMatches
+    isPathnameValid
 }
 
 export default testObj;

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import {useParams, useNavigate, useLocation, Outlet} from 'react-router-dom';
-import LoginLink from '../components/links/LoginLink';
+import PrivateLink from '../components/links/PrivateLink';
 import './Details.css'
 
 
@@ -47,9 +47,9 @@ if(!user) {
               Class: {user.class}
           </div>
           <div className="sub-menu">
-                <LoginLink to="" end><span> Marks </span> </LoginLink>
-                <LoginLink to="sports"><span> Sports </span> </LoginLink>
-                <LoginLink to="remarks"><span> Remarks </span> </LoginLink>
+                <PrivateLink to="" end><span> Marks </span> </PrivateLink>
+                <PrivateLink to="sports"><span> Sports </span> </PrivateLink>
+                <PrivateLink to="remarks"><span> Remarks </span> </PrivateLink>
           </div>
           <div className="details-body">
             <Outlet context={user}/>

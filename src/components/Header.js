@@ -4,7 +4,7 @@ import { clearUserInfo } from "../utils/Common";
 import "./Header.css";
 import LogedInOutlet from "./outlets/LogedInOutlet";
 import LoggedInMenuItem from "./LoggedInMenuItem";
-import LoginLink from "./links/LoginLink";
+import PrivateLink from "./links/PrivateLink";
 
 export default function Header() {
     const navigate = useNavigate();
@@ -13,18 +13,18 @@ export default function Header() {
         <div>
             <div className="header">
                 <LoggedInMenuItem>
-                    <LoginLink to="/">
+                    <PrivateLink to="/">
                         <span> Home </span>
-                    </LoginLink>
-                    <LoginLink to="users">
+                    </PrivateLink>
+                    <PrivateLink to="users">
                         <span> Users </span>
-                    </LoginLink>
-                    <LoginLink to="settings">
+                    </PrivateLink>
+                    <PrivateLink to="settings">
                         <span> Settings </span>
-                    </LoginLink>
-                    <LoginLink to="usage">
+                    </PrivateLink>
+                    <PrivateLink to="usage">
                         <span> Usage </span>
-                    </LoginLink>
+                    </PrivateLink>
                     <span style={{flexGrow: 1}}/>
                     <span onClick={() => {
                         clearUserInfo();

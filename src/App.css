@@ -15,14 +15,20 @@ body {
   justify-content: center;
 }
 
+.login .error{
+  color: red;
+}
+
 .login > div {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .login > div > input, button{
   margin: 5px;
   padding: 5px;
+  width: 100%;
 }
 
 a {
