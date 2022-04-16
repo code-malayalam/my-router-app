@@ -28,6 +28,10 @@ body {
 .login > div > input, button{
   margin: 5px;
   padding: 5px;
+  
+}
+
+.login-button {
   width: 100%;
 }
 

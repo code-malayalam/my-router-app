@@ -27,7 +27,7 @@ export default function Login() {
                 <label className="error">{error}</label>
                 <input value={user} placeholder="username" onChange={(evt) => setUser(evt.target.value)}/>
                 <input placeholder="password" />
-                <button onClick={handleOnClick}>Login</button>
+                <button className="login-button" onClick={handleOnClick}>Login</button>
             </div>
         </div>
         </div>
