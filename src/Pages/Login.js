@@ -1,12 +1,17 @@
 import React, { useState } from 'react'
 import { login } from '../api/users';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
+import { isLoggedIn } from '../utils/Common';
 
 export default function Login() {
-
     const [user, setUser] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
+
+    if(isLoggedIn()) {
+        return <Navigate to="/"/>;
+    }
+
     const handleOnClick = () => {
         setError('');
         login(user)
