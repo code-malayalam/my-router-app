@@ -19,6 +19,14 @@ const isLoggedIn = () => {
     }
 }
 
+const saveUserInfo = (data) => {
+    localStorage.setItem("cred", JSON.stringify(data));
+}
+
+const clearUserInfo = () => {
+    localStorage.removeItem("cred")
+}
+
 const getRoles = () => {
     try {
         const val = JSON.parse(localStorage.getItem('cred')) || {};
@@ -29,27 +37,6 @@ const getRoles = () => {
     }
 }
 
-const isUserValidForRole = (role) => {
-    const arr = getRoles();
-    return arr.indexOf(role) !== -1;
-}
-
-const saveUserInfo = (data) => {
-    localStorage.setItem("cred", JSON.stringify(data));
-}
-
-const clearUserInfo = () => {
-    localStorage.removeItem("cred")
-}
-
-function isRouteRoleMatches(roles) {
-    if(!roles) {
-        return true;
-    }
-    const filtered = roles.filter((item) => isUserValidForRole(item));
-    return !!filtered.length;
-}
-
 function getRolesForPath(pathname) {
     for (const [path, obj] of Object.entries(routeConfig)) {
         if(matchPath(path, pathname)) {
@@ -58,17 +45,25 @@ function getRolesForPath(pathname) {
     }
     return null;
 }
+
+function isRouteRoleMatches(roles) {
+    if(!roles) {
+        return true;
+    }
+    const userRoles = getRoles();
+    const filtered = roles.filter((item) => userRoles.includes(item));
+    return !!filtered.length;
+}
+
 function isPathnameValid(pathname) {
     const roles = getRolesForPath(pathname);
     return isRouteRoleMatches(roles);
 }
 
-
 export {
     testFn,
     isLoggedIn,
     getRoles,
-    isUserValidForRole,
     saveUserInfo,
     clearUserInfo,
     isPathnameValid

@@ -11,7 +11,7 @@ function Sports() {
         {
             Object.keys(sports).map((item) => {
                 return (
-                    <div>
+                    <div key={item}>
                         <div>
                             {item}
                         </div>

@@ -1,10 +1,12 @@
-import { Navigate } from 'react-router-dom';
-import { isLoggedIn } from '../../utils/Common';
-import RoleOutlet from './RoleOutlet';
+import { Navigate, Outlet, useLocation } from 'react-router-dom';
+import { isLoggedIn, isPathnameValid } from '../../utils/Common';
+
 
 export default function LogedInOutlet() {
-    if(isLoggedIn()) {
-        return <RoleOutlet />;
+    const {pathname} = useLocation();
+    const isMatch = isPathnameValid(pathname);
+    if(isLoggedIn() && isMatch) {
+        return <Outlet />;
     }
     return <Navigate to="/login"/>
 }
