@@ -55,7 +55,7 @@ function isRouteRoleMatches(roles) {
     return !!filtered.length;
 }
 
-function isPathnameValid(pathname) {
+function isPathAllowed(pathname) {
     const roles = getRolesForPath(pathname);
     return isRouteRoleMatches(roles);
 }
@@ -66,7 +66,7 @@ export {
     getRoles,
     saveUserInfo,
     clearUserInfo,
-    isPathnameValid
+    isPathAllowed
 }
 
 export default testObj;
