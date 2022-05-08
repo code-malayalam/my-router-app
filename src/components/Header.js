@@ -1,28 +1,28 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import { clearUserInfo } from '../utils/Common';
 import './Header.css';
+import PrivateLink from './links/PrivateLink';
 import LogedInOutlet from './outlets/LogedInOutlet';
 
 export default function Header() {
   return (
       <div>
           <div className='header'>
-            <NavLink to="/">
+            <PrivateLink to="/">
                 <span> Home </span>
-            </NavLink>
-            <NavLink to="users">
+            </PrivateLink>
+            <PrivateLink to="users">
                 <span> Users </span>
-            </NavLink>
-            <NavLink to="settings">
+            </PrivateLink>
+            <PrivateLink to="settings">
                 <span> Settings </span>
-            </NavLink>
-            <NavLink to="usage">
+            </PrivateLink>
+            <PrivateLink to="usage">
                 <span> Usage </span>
-            </NavLink>
-            <NavLink className="logout" to="login" onClick={() => clearUserInfo()}>
+            </PrivateLink>
+            <PrivateLink className="logout" to="login" onClick={() => clearUserInfo()}>
                 <span> Logout </span>
-            </NavLink>
+            </PrivateLink>
         </div>
         <div>
             <LogedInOutlet />

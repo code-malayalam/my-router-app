@@ -1,9 +1,14 @@
 import React from 'react'
-import { Navigate, Outlet } from 'react-router-dom';
-import { isLoggedIn } from '../../utils/Common';
+import { Navigate, Outlet, useLocation } from 'react-router-dom';
+import { isLoggedIn, isPathAllowed } from '../../utils/Common';
 
 export default function LogedInOutlet() {
-    if(isLoggedIn()) {
+
+    const {pathname} = useLocation();
+    const isAllowed = isPathAllowed(pathname);
+
+
+    if(isLoggedIn() && isAllowed) {
         return <Outlet />;
     } else {
         return <Navigate to="/login" />
